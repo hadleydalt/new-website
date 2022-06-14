@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '../graphics/ArrowDown'
 
 
-export const SkyBackground = () => {
+export const FrontPage = () => {
 
     const [arrowTriggered, setArrowTriggered] = useState(false)
 
@@ -27,18 +27,19 @@ export const SkyBackground = () => {
     return (
         <>
             <div className="sky-background">
-                <div className="constellations-wrapper"
-                onMouseOver={() => setArrowTriggered(arrowTriggered ? false : true)}>
-                    <Constellations />
-                    <animated.div 
-                        className="intro"
-                    >
-                        <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} />
-                    </animated.div>
-                    <animated.div className="scroll-indicator" style={arrowStyle}>
-                        Scroll
-                        <ArrowDown />
-                    </animated.div>
+                <div 
+                    className="constellations-wrapper"
+                    onMouseOver={() => setArrowTriggered(arrowTriggered ? false : true)}>
+                        <Constellations />
+                        <animated.div 
+                            className="intro"
+                        >
+                            <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} />
+                        </animated.div>
+                        <animated.div className="scroll-indicator" style={arrowStyle}>
+                            Scroll
+                            <ArrowDown />
+                        </animated.div>
                 </div>
                 <TopBar />
             </div>
