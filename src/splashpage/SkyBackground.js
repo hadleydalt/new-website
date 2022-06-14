@@ -3,39 +3,41 @@ import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
 import {useSpring, animated} from 'react-spring'
 import React, { useEffect, useState } from 'react';
+import { ArrowDown } from '../graphics/ArrowDown'
 
 
 export const SkyBackground = () => {
 
-    const [hovered, setHovered] = useState(false)
+    const [arrowTriggered, setArrowTriggered] = useState(false)
 
-    const style = useSpring({
-        position: 'absolute', 
-        transform: hovered ? 'translate(0px, -20px)' : 'translate(0px, 0px)',
+    const arrowStyle = useSpring({
+        transform: arrowTriggered ? 'translate(0px, 4px)' : 'translate(0px, 0px)',
         config: {
-            tension: 100,
-            friction: 10,
+            tension: 300,
+            friction: 1,
         },
     })
 
     useEffect(() => {
-        if (!hovered) {
-            return
+        if (!arrowTriggered) {
+          return
         }
-    }, [hovered, 100])
+      }, [arrowTriggered, 100]);
 
     return (
         <>
             <div className="sky-background">
-                <div className="constellations-wrapper">
+                <div className="constellations-wrapper"
+                onMouseOver={() => setArrowTriggered(arrowTriggered ? false : true)}>
                     <Constellations />
                     <animated.div 
-                        className="intro" 
-                        style={style}
-                        onMouseEnter={() => setHovered(true)} 
-                        onMouseLeave={() => setHovered(false)}
+                        className="intro"
                     >
                         <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} />
+                    </animated.div>
+                    <animated.div className="scroll-indicator" style={arrowStyle}>
+                        Scroll
+                        <ArrowDown />
                     </animated.div>
                 </div>
                 <TopBar />

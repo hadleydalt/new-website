@@ -11,7 +11,7 @@ export const TopBarLink = (props) => {
         textTransform: 'uppercase',
         color: 'white',
         fontWeight: 'bold',
-        filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.25))',
+        filter: hovered ?  'drop-shadow(0px 0px 2px rgba(250,250,250,0.9))' : 'drop-shadow(0px 4px 4px rgba(0,0,0,0.25))',
         paddingRight: 10,
         paddingLeft: 10,
         height: 67,
