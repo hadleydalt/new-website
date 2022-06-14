@@ -10,6 +10,7 @@
 }
 
 .constellations-wrapper {
+  position: relative;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -20,6 +21,12 @@
 
 .constellations {
   min-width: 100vw;
+  min-height: 100vh;
+}
+
+.axis {
+  position: absolute;
+  width: 100vw;
   min-height: 100vh;
 }
 
@@ -89,7 +96,7 @@
   padding-right: 20px;
   padding-left: 20px;
   height: 45px;
-  border-radius: 25px;
+  border-radius: 2em 1em 4em / 0.5em 3em;
   border: 2px solid white;
 }
 
