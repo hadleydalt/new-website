@@ -1,7 +1,7 @@
 import '../App.css';
 import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
-import {useSpring, animated} from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '../graphics/ArrowDown'
 
@@ -30,7 +30,7 @@ export const FrontPage = () => {
                 <div 
                     className="constellations-wrapper"
                     onMouseOver={() => setArrowTriggered(arrowTriggered ? false : true)}>
-                        <Constellations />
+                        <Constellations rotatePos={50}/>
                         <animated.div 
                             className="intro"
                         >
