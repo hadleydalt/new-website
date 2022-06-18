@@ -2,25 +2,43 @@ import '../App.css';
 import { animated } from 'react-spring'
 import React, { useEffect, useState } from 'react';
 
-export const Constellations = (props) => {
-    const [rotatePos, setRotatePos] = useState(props.rotatePos)
-
-    const style = {
-        transform: `rotate(${rotatePos}deg)`
+export class Constellations extends React.Component {
+    constructor(props) {
+        super(props)
+        this.myRef = React.createRef()
+        this.state = {scrollTop: 0}
     }
 
-    const handleScroll = () => {
-        if (window.scrollY > 360) {
-            setRotatePos(window.scrollY % 360)
-        } else {
-            setRotatePos(window.scrollY)
+    onScroll = () => {
+        const scrollY = window.scrollY
+        const scrollTop = this.myRef.current.scrollTop
+        this.setState({
+            scrollTop: scrollTop
+        })
+    }
+
+    render() {
+        const {
+            scrollTop 
+        } = this.state 
+
+        const style = {
+            transform: `rotate(${scrollTop}deg)`
         }
-    }
-
-    return (
+        return (
         <>
-            <img className="constellations" src={require('../graphics/ConstellationsNoAxis.png')} style={style} />
-            <img className="axis" src={require('../graphics/Axis.png')} style={style}/>
-        </> 
-    )
+            <img 
+                className="constellations" 
+                ref={this.myRef}
+                onScroll={this.onScroll}
+                style={style}
+                src={require('../graphics/ConstellationsNoAxis.png')}  />
+            <img 
+                className="axis" 
+                ref={this.myRef}
+                src={require('../graphics/Axis.png')} 
+                style={style}/>
+        </>
+        )
+    }
 }
