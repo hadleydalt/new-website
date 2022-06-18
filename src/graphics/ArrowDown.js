@@ -4,8 +4,10 @@ import React, { useEffect } from 'react';
 
 export const ArrowDown = (props) => {
 
+    const arrowTriggered = props.arrowTriggered
+
     const arrowStyle = useSpring({
-        transform: props.arrowTriggered ? 'translate(0px, 4px)' : 'translate(0px, 0px)',
+        transform: arrowTriggered ? 'translate(0px, 4px)' : 'translate(0px, 0px)',
         config: {
             tension: 300,
             friction: 1,
@@ -13,10 +15,10 @@ export const ArrowDown = (props) => {
     })
 
     useEffect(() => {
-        if (!props.arrowTriggered) {
+        if (!arrowTriggered) {
             return
         }
-    }, [props.arrowTriggered])
+    }, [arrowTriggered])
 
     return (
         <animated.div className="scroll-indicator" style={arrowStyle}>

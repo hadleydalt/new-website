@@ -1,48 +1,34 @@
 import '../App.css';
 import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowDown } from '../graphics/ArrowDown';
 import { ExperimentalObj } from '../body/ExperimentalObj'
 
 
-export class FrontPage extends React.Component {
-    constructor(props) {
-        super(props)
-        this.myRef = React.createRef()
-        this.state = { scrollTop: 0, arrowTriggered: false }
+export const FrontPage = () => {
+    const myRef = React.createRef()
+    const [scrollTop, setScrollTop] = useState(0)
+    const [arrowTriggered, setArrowTriggered] = useState(false)
+
+    const onScroll = () => {
+        const scrollTop = myRef.current.scrollTop
+        setScrollTop(scrollTop)
     }
 
-    onScroll = () => {
-        const scrollTop = this.myRef.current.scrollTop
-        this.setState({
-            scrollTop: scrollTop
-        })
-    }
-
-    render() {
-        const {
-            scrollTop,
-            arrowTriggered
-        } = this.state
-
-        //const [arrowTriggered, setArrowTriggered] = useState(false)
-
-        return (
+    return (
+        <div 
+            className="frontpage-container"
+            ref={myRef}
+            onScroll={() => onScroll()}
+        >
+        <div className="sky-background">
             <div 
-                className="frontpage-container"
-                ref={this.myRef}
-                onScroll={this.onScroll}
-            >
-            <div className="sky-background">
-                <div 
-                    className="constellations-wrapper"
-                    onMouseOver={() => {
-                        this.setState({
-                            arrowTriggered: !arrowTriggered
-                        })}}
+                className="constellations-wrapper"
+                onMouseOver={() => {
+                    setArrowTriggered(!arrowTriggered)}}
                 >
-                        <Constellations rotatePos={scrollTop}/>
+                        <Constellations rotatePos={scrollTop/5}/>
                         <div 
                             className="intro"
                         >
@@ -54,6 +40,5 @@ export class FrontPage extends React.Component {
             </div>
             <ExperimentalObj />
         </div>
-        )
-    }
+    )
 }
