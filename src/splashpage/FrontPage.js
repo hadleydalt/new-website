@@ -1,13 +1,13 @@
 import '../App.css';
 import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
-import React, { useState } from 'react';
+import React, { useState, createRef } from 'react';
 import { ArrowDown } from '../graphics/ArrowDown';
 import { ExperimentalObj } from '../body/ExperimentalObj'
 
 
 export const FrontPage = () => {
-    const myRef = React.createRef()
+    const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
     const [arrowTriggered, setArrowTriggered] = useState(false)
 
