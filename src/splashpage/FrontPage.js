@@ -3,7 +3,7 @@ import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
 import React, { useState, createRef } from 'react';
 import { ArrowDown } from '../graphics/ArrowDown';
-import { ExperimentalObj } from '../body/ExperimentalObj'
+import { Sidebar } from '../body/Sidebar'
 
 
 export const FrontPage = () => {
@@ -30,7 +30,7 @@ export const FrontPage = () => {
         background: "linear-gradient(180deg, rgba(" + String(skyColors.stop1R) + "," + String(skyColors.stop1G) + "," + String(skyColors.stop1B) + ",1) 0%, rgba(" + String(skyColors.stop2R) + "," + String(skyColors.stop2G) + "," + String(skyColors.stop2B) + ",1) 100%)"
     }
 
-    const constOpacity = 1 - (0.0015 * scrollTop)
+    const opacity = 1 - (0.0014 * scrollTop)
 
     return (
         <div 
@@ -44,7 +44,7 @@ export const FrontPage = () => {
                 onMouseOver={() => {
                     setArrowTriggered(!arrowTriggered)}}
                 >
-                        <Constellations rotatePos={scrollTop/5} opacity={constOpacity} />
+                        <Constellations rotatePos={scrollTop/5} opacity={opacity} />
                         <div 
                             className="intro"
                         >
@@ -52,9 +52,9 @@ export const FrontPage = () => {
                         </div>
                         <ArrowDown arrowTriggered={arrowTriggered}/>
                 </div>
-                <TopBar opacity={constOpacity}/>
+                <TopBar opacity={opacity}/>
             </div>
-            <ExperimentalObj />
+            <Sidebar inPosition={opacity < 0.5} />
         </div>
     )
 }
