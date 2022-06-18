@@ -16,10 +16,21 @@ export const FrontPage = () => {
         setScrollTop(scrollTop)
     }
 
-    const skyStyle = {
-        background: "rgb(" + String(214 + scrollTop/9.474) + "," + String(201 + scrollTop/10.286) + "," + String(222 + scrollTop/22.5) + ")",
-        background: "linear-gradient(180deg, rgba(" + String(214 + scrollTop/9.474) + "," + String(201 + scrollTop/10.286) + "," + String(222 + scrollTop/22.5) + ",1) 0%, rgba(" + String(scrollTop/2.483) + "," + String(scrollTop/1.90) + "," + String(scrollTop/1.81) + ",1) 100%)"
+    const skyColors = {
+        stop1R: (214 - scrollTop/9.474) < 176 ? 176 : 214 - scrollTop/9.474,
+        stop1G: (201 + scrollTop/10.286) > 236 ? 236 : 201 + scrollTop/10.286,
+        stop1B: (222 + scrollTop/22.5) > 238 ? 238 : 222 + scrollTop/22.5,
+        stop2R: scrollTop/2.483 > 176 ? 176 : scrollTop/2.483,
+        stop2G: scrollTop/1.90 > 236 ? 236 : scrollTop/1.90,
+        stop2B: scrollTop/1.81 > 238 ? 238 : scrollTop/1.81
     }
+
+    const skyStyle = {
+        background: "rgb(" + String(skyColors.stop1R) + "," + String(skyColors.stop1G) + "," + String(skyColors.stop1B) + ")",
+        background: "linear-gradient(180deg, rgba(" + String(skyColors.stop1R) + "," + String(skyColors.stop1G) + "," + String(skyColors.stop1B) + ",1) 0%, rgba(" + String(skyColors.stop2R) + "," + String(skyColors.stop2G) + "," + String(skyColors.stop2B) + ",1) 100%)"
+    }
+
+    const constOpacity = 1 - (0.0015 * scrollTop)
 
     return (
         <div 
@@ -33,7 +44,7 @@ export const FrontPage = () => {
                 onMouseOver={() => {
                     setArrowTriggered(!arrowTriggered)}}
                 >
-                        <Constellations rotatePos={scrollTop/5}/>
+                        <Constellations rotatePos={scrollTop/5} opacity={constOpacity} />
                         <div 
                             className="intro"
                         >
@@ -41,7 +52,7 @@ export const FrontPage = () => {
                         </div>
                         <ArrowDown arrowTriggered={arrowTriggered}/>
                 </div>
-                <TopBar />
+                <TopBar opacity={constOpacity}/>
             </div>
             <ExperimentalObj />
         </div>

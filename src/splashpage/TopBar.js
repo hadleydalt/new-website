@@ -1,9 +1,12 @@
 import '../App.css';
 import { TopBarLink } from './TopBarLink';
 
-export const TopBar = () => {
+export const TopBar = (props) => {
+
+    const opacity = props.opacity
+
     return (
-        <div className="topbar">
+        <div className="topbar" style={{opacity: opacity}}>
             <TopBarLink text="link one" dec={false}/>
             <TopBarLink text="link two" dec={false}/>
             <TopBarLink text="link three" dec={false}/>
