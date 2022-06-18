@@ -1,3 +1,9 @@
+.frontpage-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
 .sky-background {
   display: flex;
   background: rgb(214,201,222);
