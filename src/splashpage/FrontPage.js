@@ -22,7 +22,7 @@ export const FrontPage = () => {
         if (!arrowTriggered) {
           return
         }
-      }, [arrowTriggered, 100]);
+      }, [arrowTriggered]);
 
     return (
         <>
@@ -30,11 +30,11 @@ export const FrontPage = () => {
                 <div 
                     className="constellations-wrapper"
                     onMouseOver={() => setArrowTriggered(arrowTriggered ? false : true)}>
-                        <Constellations rotatePos={50}/>
+                        <Constellations rotatePos={0}/>
                         <animated.div 
                             className="intro"
                         >
-                            <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} />
+                            <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} alt=""/>
                         </animated.div>
                         <animated.div className="scroll-indicator" style={arrowStyle}>
                             Scroll

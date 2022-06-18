@@ -6,7 +6,7 @@ export const Constellations = (props) => {
     const [rotatePos, setRotatePos] = useState(props.rotatePos)
 
     const style = {
-        transform: `rotate(${props.rotatePos}deg)`
+        transform: `rotate(${rotatePos}deg)`
     }
 
     const handleScroll = () => {
