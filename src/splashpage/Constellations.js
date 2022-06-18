@@ -2,8 +2,10 @@ import '../App.css';
 
 export const Constellations = (props) => {
 
+    const rotatePos = props.rotatePos
+
     const style = {
-        transform: `rotate(${props.rotatePos}deg)`
+        transform: `rotate(${rotatePos}deg)`
     }
 
     return (

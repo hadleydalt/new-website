@@ -6,8 +6,6 @@
 
 .sky-background {
   display: flex;
-  background: rgb(214,201,222);
-  background: linear-gradient(180deg, rgba(214,201,222,1) 0%, rgba(0,0,0,1) 100%);
   width: 100vw;
   height: 100vh;
   flex-direction: column;
