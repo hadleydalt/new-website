@@ -29,20 +29,6 @@ export class FrontPage extends React.Component {
 
         //const [arrowTriggered, setArrowTriggered] = useState(false)
 
-        const arrowStyle = useSpring({
-            transform: arrowTriggered ? 'translate(0px, 4px)' : 'translate(0px, 0px)',
-            config: {
-                tension: 300,
-                friction: 1,
-            },
-        })
-
-        useEffect(() => {
-            if (!arrowTriggered) {
-                return
-            }
-        }, [arrowTriggered])
-
         return (
             <div 
                 className="frontpage-container"
@@ -63,10 +49,7 @@ export class FrontPage extends React.Component {
                         >
                             <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} alt=""/>
                         </div>
-                        <animated.div className="scroll-indicator" style={arrowStyle}>
-                            Scroll
-                            <ArrowDown />
-                        </animated.div>
+                        <ArrowDown arrowTriggered={arrowTriggered}/>
                 </div>
                 <TopBar />
             </div>
