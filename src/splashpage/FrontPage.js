@@ -1,8 +1,7 @@
 import '../App.css';
 import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
-import { useSpring, animated } from 'react-spring'
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ArrowDown } from '../graphics/ArrowDown';
 import { ExperimentalObj } from '../body/ExperimentalObj'
 
