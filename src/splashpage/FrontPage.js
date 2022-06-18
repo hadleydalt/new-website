@@ -4,6 +4,7 @@ import { TopBar } from './TopBar';
 import { useSpring, animated } from 'react-spring'
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '../graphics/ArrowDown'
+import { ExperimentalObj } from '../body/ExperimentalObj'
 
 
 export const FrontPage = () => {
@@ -43,6 +44,7 @@ export const FrontPage = () => {
                 </div>
                 <TopBar />
             </div>
+            <ExperimentalObj />
         </>
     )
 }

@@ -15,6 +15,7 @@ export class Constellations extends React.Component {
         this.setState({
             scrollTop: scrollTop
         })
+        console.log("scrollTop is " + scrollTop)
     }
 
     render() {
