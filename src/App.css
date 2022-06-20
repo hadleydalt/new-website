@@ -197,11 +197,11 @@
   height: 1vh;
   border-radius: 2em 1em 4em / 0.5em 3em;
   position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.2));
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.1));
 }
 
 .contact-box {
-  width: 12vw; 
+  width: 14vw; 
   height: 25vh; 
   position: absolute; 
   margin-top: 53vh;
@@ -214,8 +214,9 @@
 .contact-box-text {
   margin-top: 10px;
   margin-left: 15px;
-  width: 10vw;
-  padding-right: 6px;
+  width: 11vw;
+  text-align: justify;
+  padding-right: 1.2vw;
   max-height: 14vh;
   overflow-y: scroll;
   overflow-x: hidden;
