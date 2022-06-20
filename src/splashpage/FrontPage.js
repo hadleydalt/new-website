@@ -2,8 +2,9 @@ import '../App.css';
 import { Constellations } from './Constellations';
 import { TopBar } from './TopBar';
 import React, { useState, createRef } from 'react';
-import { ArrowDown } from '../graphics/ArrowDown';
+import { ArrowDown } from '../graphics/icons/ArrowDown';
 import { Sidebar } from '../body/Sidebar'
+import { ExperimentalObj } from '../body/ExperimentalObj';
 
 
 export const FrontPage = () => {
@@ -48,13 +49,14 @@ export const FrontPage = () => {
                         <div 
                             className="intro"
                         >
-                            <img src={require('../graphics/TRANSPARENT SPLASH GRAPHIC.png')} alt=""/>
+                            <img src={require('../graphics/images/TRANSPARENT SPLASH GRAPHIC.png')} alt=""/>
                         </div>
                         <ArrowDown arrowTriggered={arrowTriggered}/>
                 </div>
                 <TopBar opacity={opacity}/>
             </div>
             <Sidebar inPosition={opacity < 0.5} />
+            <ExperimentalObj />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import '../App.css';
+import '../../App.css';
 import { useSpring, animated } from 'react-spring'
 import React, { useEffect } from 'react';
 
