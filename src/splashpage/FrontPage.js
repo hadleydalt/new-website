@@ -8,7 +8,6 @@ import { ExperimentalObj } from '../body/ExperimentalObj';
 import { AllPosts } from '../body/AllPosts';
 import useWindowDimensions from '../functions/UseWindowDims'
 
-
 export const FrontPage = () => {
     const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
@@ -34,7 +33,7 @@ export const FrontPage = () => {
         background: "linear-gradient(180deg, rgba(" + String(skyColors.stop1R) + "," + String(skyColors.stop1G) + "," + String(skyColors.stop1B) + ",1) 0%, rgba(" + String(skyColors.stop2R) + "," + String(skyColors.stop2G) + "," + String(skyColors.stop2B) + ",1) 100%)"
     }
 
-    const opacity = 1 - (0.0014 * scrollTop)
+    const opacity = 1 - (0.0005 * scrollTop)
 
     return (
         <div 
@@ -48,7 +47,7 @@ export const FrontPage = () => {
                 onMouseOver={() => {
                     setArrowTriggered(!arrowTriggered)}}
                 >
-                        <Constellations rotatePos={scrollTop/4} opacity={opacity} />
+                        <Constellations rotatePos={scrollTop/2} opacity={opacity} />
                         <div 
                             className="intro"
                         >
@@ -59,7 +58,7 @@ export const FrontPage = () => {
                 <TopBar opacity={opacity}/>
             </div>
             <div className="content-wrapper">
-                <Sidebar inPosition={opacity < 0.5} />
+                <Sidebar inPosition={scrollTop > (height - 300)} />
                 <div className="inner-content-wrapper" style={{overflow: scrollTop > height ? 'scroll' : 'hidden'}}>
                     <AllPosts />
                 </div>

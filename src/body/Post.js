@@ -1,11 +1,13 @@
 import '../App.css';
 import { Tag } from '../graphics/icons/Tag'
+import { PostLearnMore } from './PostLearnMore';
 
 export const Post = (props) => {
 
     const tags = props.tags ? props.tags : ['Tag 1', 'Tag 2', 'Tag 3']
     const title = props.title ? props.title : 'Project Title'
     const date = props.date ? props.date : 'May 2020'
+    const imgPath = props.imgPath ? props.imgPath : 'sample img'
 
     return (
         <div className="post">
@@ -32,7 +34,11 @@ export const Post = (props) => {
                 <div className="post-date-icon" />
                 <div className="post-date-text">Created in <date>{date}</date></div>
             </div>
-            <div className="post-learn-more">Learn more →</div>
+            <div className="post-image-wrapper">
+                <img src={require('../graphics/images/' + imgPath + '.png')} alt="" style={{width: '70%', height: '45%'}} />
+                <div class="post-image-tape" />
+            </div>
+            <PostLearnMore />
         </div>
     )
 }
