@@ -1,11 +1,12 @@
 import '../App.css';
 import { Tag } from '../graphics/icons/Tag'
+import { PostTag } from './PostTag'
 
 export const Post = (props) => {
 
-    const tags = props.tags
-    const title = props.title
-    const date = props.date
+    const tags = props.tags ? props.tags : ['Tag 1', 'Tag 2', 'Tag 3']
+    const title = props.title ? props.title : 'Project Title'
+    const date = props.date ? props.date : 'May 2020'
 
     return (
         <div className="post">
@@ -14,9 +15,7 @@ export const Post = (props) => {
                 <div className="post-tags-text-wrapper">
                 {tags?.map((tag, index) => {
                     return (
-                    <span key={index} className="post-tags-text">
-                    <bold>✘</bold> {tag}
-                    </span>
+                    <PostTag key={index} tag={tag} />
                     )
                 })}
                 </div>
@@ -28,8 +27,9 @@ export const Post = (props) => {
             </div>
             <div className="post-date-wrapper">
                 <div className="post-date-icon" />
-                <div className="post-date-text">Created in {date}</div>
+                <div className="post-date-text">Created in <date>{date}</date></div>
             </div>
+            <div className="post-learn-more">Learn more →</div>
         </div>
     )
 }
