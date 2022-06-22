@@ -1,6 +1,5 @@
 import '../App.css';
 import { Tag } from '../graphics/icons/Tag'
-import { PostTag } from './PostTag'
 
 export const Post = (props) => {
 
@@ -15,7 +14,11 @@ export const Post = (props) => {
                 <div className="post-tags-text-wrapper">
                 {tags?.map((tag, index) => {
                     return (
-                    <PostTag key={index} tag={tag} />
+                        <span 
+                            key={index}
+                            className="post-tags-text">
+                        <bold>✘</bold> {tag}
+                        </span>
                     )
                 })}
                 </div>
