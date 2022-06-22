@@ -2,16 +2,18 @@ import '../App.css';
 import React, { useEffect, useState } from 'react';
 import {useSpring, animated} from 'react-spring'
 
-export const PostLearnMore = () => {
+export const PostLearnMore = (props) => {
 
     const [hovered, setHovered] = useState(false)
+    const pressed = props.pressed
     
     const style = useSpring({
         fontSize: hovered ? '2.2vh' : '2vh',
         fontWeight: hovered ? 'bold' : 'none',
         textDecoration: hovered ? 'underline' : 'none',
         letterSpacing: hovered ? '1px' : '0px',
-        marginTop: hovered ? '18.9vh' : '19vh',
+        marginTop: pressed ? '15vh' : pressed && hovered ? '15vh' : hovered ? '18.9vh' : '19vh',
+        color: pressed ? 'rgb(250,250,250)' : 'rgb(145,189,199)',
         config: {
             tension: 100,
             friction: 10
@@ -29,6 +31,8 @@ export const PostLearnMore = () => {
             className="post-learn-more"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            style={style}>Learn more →</animated.div>
+            style={style}>
+                {pressed ? '← Collapse' : 'Learn more →'}
+            </animated.div>
     )
 }

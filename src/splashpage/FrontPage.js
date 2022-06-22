@@ -33,7 +33,7 @@ export const FrontPage = () => {
         background: "linear-gradient(180deg, rgba(" + String(skyColors.stop1R) + "," + String(skyColors.stop1G) + "," + String(skyColors.stop1B) + ",1) 0%, rgba(" + String(skyColors.stop2R) + "," + String(skyColors.stop2G) + "," + String(skyColors.stop2B) + ",1) 100%)"
     }
 
-    const opacity = 1 - (0.0005 * scrollTop)
+    const opacity = 1 - (0.0015 * scrollTop)
 
     return (
         <div 
