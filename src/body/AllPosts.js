@@ -7,7 +7,11 @@ export const AllPosts = () => {
 
     return (
         <>
-        <Post tags={['Tag 1', 'Tag 2', 'Tag 3']} />
+        <Post 
+            title="Project Title"
+            tags={['Tag 1', 'Tag 2', 'Tag 3']} 
+            date="May 2020"
+        />
         <Post />
         <Post />
         </>
