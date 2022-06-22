@@ -18,7 +18,6 @@ export const FrontPage = () => {
     const onScroll = () => {
         const scrollTop = myRef.current.scrollTop
         setScrollTop(scrollTop)
-        console.log(scrollTop)
     }
 
     const skyColors = {

@@ -296,8 +296,56 @@
 
 .post {
   margin-top: 50px;
-  width: 40vw; 
+  width: 38vw; 
   height: 50vh; 
-  background: pink;
-  margin-left: 17.5vw;
+  margin-left: 18.5vw;
+  background: rgb(145,189,199);
+  background: linear-gradient(90deg, rgba(145,189,199,1) 0%, rgba(176,236,238,1) 100%);
+  border-radius: 25px;
+  border: 3px solid white;
+  filter: drop-shadow(0px 4px 30px rgba(0,0,0,0.15));
 }
+
+.post img {
+  position: absolute;
+  width: 100%;
+  height: 45vh; 
+  margin-top: 5vh;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.25));
+}
+
+.post-tags-wrapper {
+  width: 60%;
+  position: absolute;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-tags-icon {
+  padding: 10;
+  padding-left: 1vw;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+.post-tags-text-wrapper {
+  width: 85%;
+}
+
+.post-tags-text {
+  text-transform: uppercase;
+  font-family: 'Trebuchet MS';
+  color: white;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+.post-tags-text bold {
+  opacity: 0.3;
+  font-weight: bold;
+}
+
