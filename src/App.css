@@ -277,3 +277,27 @@
   height: 30px;
   transform: rotate(5deg);
 }
+
+.content-wrapper {
+  position: sticky; 
+  top: 0vh; 
+  display: flex; 
+  flex-direction: row;
+  align-items: flex-start; 
+}
+
+.inner-content-wrapper {
+  width: 75vw; 
+  margin-left: 3vw; 
+  height: 100vh;
+  background: black;
+  overflow: scroll;
+}
+
+.post {
+  margin-top: 50px;
+  width: 40vw; 
+  height: 50vh; 
+  background: pink;
+  margin-left: 17.5vw;
+}

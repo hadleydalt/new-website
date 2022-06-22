@@ -9,7 +9,7 @@ export const ContactBox = () => {
     const [hovered, setHovered] = useState(false)
 
     const style = useSpring({
-        borderRadius: hovered ? '2em 1em / 2em 5em' : '0.5em 5em / 8em 1em', 
+        borderRadius: hovered ? '0em 0em / 0em 0em' : '0.5em 5em / 8em 2em', 
         config: {
             tension: 30,
             friction: 10
