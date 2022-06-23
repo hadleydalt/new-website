@@ -5,14 +5,11 @@ import React, { useState, createRef } from 'react';
 import { ArrowDown } from '../graphics/icons/ArrowDown';
 import { Sidebar } from '../body/Sidebar'
 import { ExperimentalObj } from '../body/ExperimentalObj';
-import { AllPosts } from '../body/AllPosts';
-import useWindowDimensions from '../functions/UseWindowDims'
 
 export const FrontPage = () => {
     const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
     const [arrowTriggered, setArrowTriggered] = useState(false)
-    const { height, width } = useWindowDimensions()
 
     const onScroll = () => {
         const scrollTop = myRef.current.scrollTop
@@ -58,10 +55,8 @@ export const FrontPage = () => {
                 <TopBar opacity={opacity}/>
             </div>
             <div className="content-wrapper">
-                <Sidebar inPosition={scrollTop > (height - 300)} />
-                <div className="inner-content-wrapper" style={{overflow: scrollTop > height ? 'scroll' : 'hidden'}}>
-                    <AllPosts />
-                </div>
+                <Sidebar inPosition={opacity < 0.5} />
+                <div className="inner-content-wrapper" style={{overflow: 'hidden'}} />
             </div>
             <ExperimentalObj inPost={false}/>
         </div>
