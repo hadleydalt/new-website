@@ -14,7 +14,6 @@ export const Post = (props) => {
     const date = props.date ? props.date : 'May 2020'
     const imgPath = props.imgPath ? props.imgPath : 'sample img'
     const innerChild = props.innerChild ? props.innerChild : <SamplePost />
-    const postHeight = props.postHeight ? props.postHeight : '60vh'
 
     const fileStyle = useSpring({
         marginLeft: expanded ? '-150vw' : '0px',
@@ -51,7 +50,7 @@ export const Post = (props) => {
     })
 
     const postInnerBGStyle = useSpring({
-        marginTop: expanded ? '30%' : '100%',
+        marginTop: expanded ? '23vh' : '100vh',
         opacity: expanded ? 1 : 0,
         config: {
             tension: 100, 
@@ -60,7 +59,7 @@ export const Post = (props) => {
     })
 
     const postStyle = useSpring({
-        height: expanded ? postHeight : '50vh', 
+        height: expanded ? '80vh' : '50vh', 
         config: {
             tension: 100,
             friction: 15
