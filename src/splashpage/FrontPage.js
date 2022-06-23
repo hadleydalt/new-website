@@ -47,7 +47,7 @@ export const FrontPage = () => {
                 onMouseOver={() => {
                     setArrowTriggered(!arrowTriggered)}}
                 >
-                        <Constellations rotatePos={scrollTop/2} opacity={opacity} />
+                        <Constellations rotatePos={scrollTop/6} opacity={opacity} />
                         <div 
                             className="intro"
                         >
