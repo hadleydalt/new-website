@@ -63,7 +63,6 @@ export const FrontPage = () => {
                     <AllPosts />
                 </div>
             </div>
-            <ExperimentalObj inPost={false}/>
         </div>
     )
 }

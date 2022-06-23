@@ -48,14 +48,6 @@ export const Sidebar = (props) => {
         },
     })
 
-    const sidebarStyle = useSpring({
-        marginLeft: inPosition ? '0' : '-22vw',
-        config: {
-            tension: 30,
-            friction: 10,
-        }
-    })
-
     useEffect(() => {
         if (!inPosition) {
             return
@@ -63,8 +55,8 @@ export const Sidebar = (props) => {
     }, [inPosition, 100])
 
     return (
-        <animated.div className="sidebar" style={sidebarStyle}>
-            <div className="inner-box" style={sidebarStyle}>
+        <div className="sidebar">
+            <div className="inner-box">
                 <animated.div className="grad-circle" style={gradStyle} />
                 <animated.div className="white-circle" style={whiteStyle} />
                 <animated.div className="dotted-circle" style={dottedStyle} />
@@ -80,6 +72,6 @@ export const Sidebar = (props) => {
                     <ContactBox />
                 </div>
             </div>
-        </animated.div>
+        </div>
     )
 }
