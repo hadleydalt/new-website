@@ -5,15 +5,13 @@ import { PaintingFineArtPosts } from './pages/PaintingFineArtPosts';
 import { SWEUXPosts } from './pages/SWEUXPosts';
 import { TypographyLogosPosts } from './pages/TypographyLogosPosts';
 
-import { Page } from './splashpage/Page'
-
 export const Main = () => {
     return (
         <Routes>
-            <Route path='/' element={<Page posts={<SWEUXPosts />} pgKey="SWEUX"/>} />
-            <Route path='/typography-logos' element={<Page posts={<TypographyLogosPosts />} pgKey="TypographyLogos"/>} />
-            <Route path='/digital-illustration' element={<Page posts={<DigIlluPosts />}/>} pgKey="DigitalIllustration" />
-            <Route path='/painting-fine-art' element={<Page posts={<PaintingFineArtPosts />}/>} pgKey="PaintingFineArt"/>
+            <Route path='/' element={<SWEUXPosts />} />
+            <Route path='/typography-logos' element={<TypographyLogosPosts />} />
+            <Route path='/digital-illustration' element={<DigIlluPosts />} />
+            <Route path='/painting-fine-art' element={<PaintingFineArtPosts />} />
         </Routes>
     )
 }

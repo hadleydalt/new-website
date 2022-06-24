@@ -4,7 +4,6 @@ import { useSpring, animated } from 'react-spring'
 
 export const SidebarLink = (props) => {
     const [hovered, setHovered] = useState(false)
-    const clicked = props.clicked
 
     const linkStyle = useSpring({
         width: hovered ? '10vw' : '0',
@@ -15,13 +14,13 @@ export const SidebarLink = (props) => {
         },
     })
 
-    const iconClickedStyle = {
+    /*const iconClickedStyle = {
         filter: clicked ? "drop-shadow(0px 0px 2px rgba(250,250,250,1))" : "drop-shadow(0px 4px 4px rgba(0,0,0,0.25))", 
     }
 
     const textClickedStyle = {
         filter: clicked ? "drop-shadow(0px 0px 2px rgba(250,250,250,1))" : "drop-shadow(0px 4px 4px rgba(0,0,0,0.25))", 
-    }
+    } */
 
     useEffect(() => {
         if (!hovered) {
@@ -33,8 +32,8 @@ export const SidebarLink = (props) => {
         <>
         <animated.div className="sidebar-link-hovered-bg" style={linkStyle} />
         <div className="sidebar-link">
-            <div style={iconClickedStyle}> {props.icon} </div>
-            <div className="sidebar-link-text" style={textClickedStyle} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>{props.text}</div>
+            {props.icon}
+            <div className="sidebar-link-text" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>{props.text}</div>
         </div>
         </>
     )

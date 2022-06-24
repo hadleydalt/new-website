@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom'
 export const Sidebar = (props) => {
 
     const inPosition = props.inPosition
-    const linkClicked = props.linkClicked
 
     const whiteStyle = useSpring({
         marginTop: inPosition ? '2vh' : '-20vh',
@@ -67,16 +66,16 @@ export const Sidebar = (props) => {
                     <div className="sidebar-title">Navigation</div>
                     <div className="sidebar-links-wrapper">
                         <Link to='/' style={{textDecoration: 'none'}}>
-                            <SidebarLink text="SWE/UX Projects" icon={<Smartphone />} clicked={linkClicked === "SWEUX"} />
+                            <SidebarLink text="SWE/UX Projects" icon={<Smartphone />} />
                         </Link>
                         <Link to='/typography-logos' style={{textDecoration: 'none'}}>
-                            <SidebarLink text="Typography and Logos" icon={<Layout />} clicked={linkClicked === "TypographyLogos"} />
+                            <SidebarLink text="Typography and Logos" icon={<Layout />} />
                         </Link>
                         <Link to='/digital-illustration' style={{textDecoration: 'none'}}>
-                            <SidebarLink text="Digital Illustrations" icon={<Folder />} clicked={linkClicked === "DigitalIllustration"} />
+                            <SidebarLink text="Digital Illustrations" icon={<Folder />} />
                         </Link>
                         <Link to='painting-fine-art' style={{textDecoration: 'none'}}>
-                            <SidebarLink text="Painting and Fine Art" icon={<Feather />} clicked={linkClicked === "PaintingFineArt"}/>
+                            <SidebarLink text="Painting and Fine Art" icon={<Feather />} />
                         </Link>
                     </div>
                     <ContactBox />

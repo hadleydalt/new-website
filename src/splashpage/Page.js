@@ -12,7 +12,6 @@ export const Page = (props) => {
     const [arrowTriggered, setArrowTriggered] = useState(false)
     const { height, width } = useWindowDimensions()
     const posts = props.posts
-    const key = props.pgKey
 
     const onScroll = () => {
         const scrollTop = myRef.current.scrollTop
@@ -58,7 +57,7 @@ export const Page = (props) => {
                 <TopBar opacity={opacity}/>
             </div>
             <div className="content-wrapper">
-                <Sidebar inPosition={scrollTop > (height - 300)} linkClicked={key} />
+                <Sidebar inPosition={scrollTop > (height - 300)} />
                 <div className="inner-content-wrapper" style={{overflow: scrollTop > height ? 'scroll' : 'hidden'}}>
                     {posts}
                 </div>

@@ -1,12 +1,11 @@
 import './App.css';
 import { Main } from './Main'
+import { Page } from './splashpage/Page'
 
 function App() {
   return (
-    <>
-      <Main />
-    </>
-  );
+    <Page posts={<Main />} />
+  ); 
 }
 
 export default App
