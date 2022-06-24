@@ -4,11 +4,10 @@ import { TopBar } from './TopBar';
 import React, { useState, createRef } from 'react';
 import { ArrowDown } from '../graphics/icons/ArrowDown';
 import { Sidebar } from '../body/Sidebar'
-import { ExperimentalObj } from '../body/ExperimentalObj';
 import { AllPosts } from '../body/AllPosts';
 import useWindowDimensions from '../functions/UseWindowDims'
 
-export const FrontPage = () => {
+export const Page = () => {
     const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
     const [arrowTriggered, setArrowTriggered] = useState(false)
