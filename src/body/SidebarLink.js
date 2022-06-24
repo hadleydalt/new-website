@@ -18,7 +18,7 @@ export const SidebarLink = (props) => {
         if (!hovered) {
             return
         }
-    }, [hovered, 50])
+    }, [hovered])
 
     return (
         <>

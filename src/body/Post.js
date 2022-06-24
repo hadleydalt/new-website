@@ -70,7 +70,7 @@ export const Post = (props) => {
         if (!expanded) {
             return
         }
-    }, [expanded, 100])
+    }, [expanded])
 
     return (
         <animated.div className="post" style={postStyle}>

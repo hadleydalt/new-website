@@ -24,7 +24,7 @@ export const PostLearnMore = (props) => {
         if (!hovered) {
             return
         }
-    }, [hovered, 100])
+    }, [hovered])
 
     return (
         <animated.div 

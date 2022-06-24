@@ -47,7 +47,7 @@ export const TopBarLink = (props) => {
         if (!hovered) {
             return
         }
-    }, [hovered, 100])
+    }, [hovered])
 
 
     if (props.dec) {

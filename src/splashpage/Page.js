@@ -10,9 +10,8 @@ export const Page = (props) => {
     const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
     const [arrowTriggered, setArrowTriggered] = useState(false)
-    const { height, width } = useWindowDimensions()
+    const { height } = useWindowDimensions()
     const posts = props.posts
-    const pgKey = props.pgKey
 
     const onScroll = () => {
         const scrollTop = myRef.current.scrollTop

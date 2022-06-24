@@ -12,8 +12,8 @@ export const Constellations = (props) => {
 
     return (
         <>
-            <img className="constellations" src={require('../graphics/images/ConstellationsNoAxis.png')} style={style} />
-            <img className="axis" src={require('../graphics/images/Axis.png')} style={style}/>
+            <img className="constellations" src={require('../graphics/images/ConstellationsNoAxis.png')} style={style} alt=""/>
+            <img className="axis" src={require('../graphics/images/Axis.png')} style={style} alt=""/>
         </> 
     )
 }
