@@ -32,19 +32,12 @@ Type: .js file
 Example: <SamplePost />
 Notes: Create a .js file under /body/posts and export the post as a const. Contain it with the div tag "post-style". Refer to /body/posts/SamplePost for an example
 
-postHeight 
------- 
-Type: String
-Example '60vh'
-Notes: It must be in vh form, this is a bug. 
-
 */
 
 export const DigIlluPosts = () => {
 
     return (
         <>
-        <Post />
         <Post />
         <Post />
         </>

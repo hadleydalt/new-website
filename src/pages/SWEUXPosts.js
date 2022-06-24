@@ -46,7 +46,6 @@ export const SWEUXPosts = () => {
         <>
         <Post />
         <Post />
-        <Post />
         </>
     )
 }

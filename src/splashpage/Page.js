@@ -4,14 +4,15 @@ import { TopBar } from './TopBar';
 import React, { useState, createRef } from 'react';
 import { ArrowDown } from '../graphics/icons/ArrowDown';
 import { Sidebar } from '../body/Sidebar'
-import { AllPosts } from '../body/AllPosts';
 import useWindowDimensions from '../functions/UseWindowDims'
 
-export const Page = () => {
+export const Page = (props) => {
     const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
     const [arrowTriggered, setArrowTriggered] = useState(false)
     const { height, width } = useWindowDimensions()
+    const posts = props.posts
+    const key = props.pgKey
 
     const onScroll = () => {
         const scrollTop = myRef.current.scrollTop
@@ -57,9 +58,9 @@ export const Page = () => {
                 <TopBar opacity={opacity}/>
             </div>
             <div className="content-wrapper">
-                <Sidebar inPosition={scrollTop > (height - 300)} />
+                <Sidebar inPosition={scrollTop > (height - 300)} linkClicked={key} />
                 <div className="inner-content-wrapper" style={{overflow: scrollTop > height ? 'scroll' : 'hidden'}}>
-                    <AllPosts />
+                    {posts}
                 </div>
             </div>
         </div>
