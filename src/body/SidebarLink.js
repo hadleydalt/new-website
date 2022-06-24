@@ -14,14 +14,6 @@ export const SidebarLink = (props) => {
         },
     })
 
-    /*const iconClickedStyle = {
-        filter: clicked ? "drop-shadow(0px 0px 2px rgba(250,250,250,1))" : "drop-shadow(0px 4px 4px rgba(0,0,0,0.25))", 
-    }
-
-    const textClickedStyle = {
-        filter: clicked ? "drop-shadow(0px 0px 2px rgba(250,250,250,1))" : "drop-shadow(0px 4px 4px rgba(0,0,0,0.25))", 
-    } */
-
     useEffect(() => {
         if (!hovered) {
             return
@@ -32,7 +24,7 @@ export const SidebarLink = (props) => {
         <>
         <animated.div className="sidebar-link-hovered-bg" style={linkStyle} />
         <div className="sidebar-link">
-            {props.icon}
+            <div> {props.icon} </div>
             <div className="sidebar-link-text" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>{props.text}</div>
         </div>
         </>

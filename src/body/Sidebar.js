@@ -66,7 +66,7 @@ export const Sidebar = (props) => {
                     <div className="sidebar-title">Navigation</div>
                     <div className="sidebar-links-wrapper">
                         <Link to='/' style={{textDecoration: 'none'}}>
-                            <SidebarLink text="SWE/UX Projects" icon={<Smartphone />} />
+                            <SidebarLink text="SWE/UX Projects" icon={<Smartphone />}  />
                         </Link>
                         <Link to='/typography-logos' style={{textDecoration: 'none'}}>
                             <SidebarLink text="Typography and Logos" icon={<Layout />} />
