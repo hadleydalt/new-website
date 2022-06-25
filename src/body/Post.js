@@ -3,7 +3,7 @@ import { Tag } from '../graphics/icons/Tag'
 import { PostLearnMore } from './PostLearnMore';
 import React, { useEffect, useState } from 'react';
 import {useSpring, animated} from 'react-spring'
-import { SamplePost } from './SamplePost'
+import { SampleContent } from '../pages/SampleContent'
 
 export const Post = (props) => {
 
@@ -13,7 +13,7 @@ export const Post = (props) => {
     const title = props.title ? props.title : 'Project Title'
     const date = props.date ? props.date : 'May 2020'
     const imgPath = props.imgPath ? props.imgPath : 'sample img'
-    const innerChild = props.innerChild ? props.innerChild : <SamplePost />
+    const content = props.content ? props.content : <SampleContent />
 
     const fileStyle = useSpring({
         marginLeft: expanded ? '-150vw' : '0px',
@@ -105,7 +105,7 @@ export const Post = (props) => {
                 <PostLearnMore pressed={expanded}/>
             </div>
             <animated.div className="post-inner-bg" style={postInnerBGStyle}>
-                {innerChild}
+                {content}
             </animated.div>
         </animated.div>
     )

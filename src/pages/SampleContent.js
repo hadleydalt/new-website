@@ -1,6 +1,6 @@
 import '../App.css';
 
-export const SamplePost = () => {
+export const SampleContent = () => {
 
     return (
        <div className="post-style">

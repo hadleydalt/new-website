@@ -26,17 +26,11 @@ Type: String
 Example: "sample img"
 Notes: Convert the image to PNG format and store it in /graphics/images
 
-innerChild 
+content
 ------ 
 Type: .js file
-Example: <SamplePost />
-Notes: Create a .js file under /body/posts and export the post as a const. Contain it with the div tag "post-style". Refer to /body/posts/SamplePost for an example
-
-postHeight 
------- 
-Type: String
-Example '60vh'
-Notes: It must be in vh form, this is a bug. 
+Example: <SampleContent />
+Notes: Create a .js file under /body/posts and export the post as a const. Contain it with the div tag "post-style". Refer to /pages/SampleContent for an example
 
 */
 
