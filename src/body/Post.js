@@ -3,7 +3,7 @@ import { Tag } from '../graphics/icons/Tag'
 import { PostLearnMore } from './PostLearnMore';
 import React, { useEffect, useState } from 'react';
 import {useSpring, animated} from 'react-spring'
-import { SamplePost } from './posts/SamplePost'
+import { SamplePost } from './SamplePost'
 
 export const Post = (props) => {
 
