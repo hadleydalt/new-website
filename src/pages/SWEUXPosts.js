@@ -1,5 +1,6 @@
 import '../App.css';
 import { Post } from '../body/Post'
+import { Dash } from './swe-ux-posts/Dash';
 
 /* Insert new posts and edit existing posts here! 
 
@@ -38,8 +39,13 @@ export const SWEUXPosts = () => {
 
     return (
         <>
-        <Post />
-        <Post />
+        <Post 
+            tags={["React", "TypeScript", "SCSS", "Frontend"]}
+            title="DASH: Web app redesign"
+            date="May 2021"
+            imgPath="dash cover"
+            content={<Dash />}
+        />
         </>
     )
 }
