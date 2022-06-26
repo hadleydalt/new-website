@@ -59,7 +59,9 @@ export const Post = (props) => {
     })
 
     const postStyle = useSpring({
-        height: expanded ? '80vh' : '50vh', 
+        height: expanded ? '90vh' : '50vh', 
+        width: expanded ? '61vw' : '38vw',
+        marginLeft: expanded ? '7vw' : '18.5vw',
         config: {
             tension: 100,
             friction: 15
