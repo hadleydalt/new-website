@@ -15,7 +15,7 @@ I was challenged to code my own version of DASH using <b>TypeScript</b>, <b>Reac
 
 <p><b>Note:</b> For your understanding, DASH enables users to populate textual "notes" and files onto an unbounded 2D freeform canvas.</p>
 
-<p><img src={require("../../graphics/images/dash_1.png")} style={{width: '70%', height: 'auto'}} /></p>
+<p><img src={require("../../graphics/images/dash_1.png")} style={{width: '100%'}} /></p>
 
 <p><h>Design process</h></p>
 <p><b><u>Design Goals</u></b></p>
@@ -25,21 +25,21 @@ I was challenged to code my own version of DASH using <b>TypeScript</b>, <b>Reac
 
 <p>To tackle Goal 1, I began by breaking up DASH's functionality into four components:</p>
 
-<img src={require("../../graphics/images/dash_2.png")} />
+<p><img src={require("../../graphics/images/dash_2.png")} style={{width: '50%', marginLeft: '25%'}} /></p>
 
 <p>To address Goal 2, I first created an <b>affinity diagram</b> to map each pain point with its potential solutions.</p>
 
-<img src={require("../../graphics/images/dash_3.png")} />
+<img src={require("../../graphics/images/dash_3.png")} style={{width: '100%'}} />
 
 <p><b><u>Wireframe and Prototype</u></b></p>
 
 <p>Synthesizing my findings, I proceeded to make a wireframe sketch that <b>integrated the four goal functionalities</b> of DASH while also <b>addressing the pain points</b>. </p>
 
-<img src={require("../../graphics/images/dash_4.png")} />
+<img src={require("../../graphics/images/dash_4.png")} style={{width: '40%', marginLeft: '30%'}}/>
 
 <p>I then transferred the sketch to a prototype in Figma...</p>
 
-<img src={require("../../graphics/images/dash_5.png")} />
+<img src={require("../../graphics/images/dash_5.png")} style={{width: '40%', marginLeft: '30%'}}/>
 
 <p>The next step was to code the functional web app using React, TypeScript, and SCSS.</p>
 
@@ -49,12 +49,12 @@ I was challenged to code my own version of DASH using <b>TypeScript</b>, <b>Reac
 
 <p><b><u>Screenshots of Result</u></b></p>
 
-<img src={require("../../graphics/images/dash_6.png")} />
+<img src={require("../../graphics/images/dash_6.png")} style={{width: '100%'}}/>
 
 <p><b><u>Diagram of Solution and Functionalities</u></b></p>
 
-<img src={require("../../graphics/images/dash_7.png")} />
-<img src={require("../../graphics/images/dash_8.png")} />
+<img src={require("../../graphics/images/dash_7.png")} style={{width: '100%'}}/>
+<img src={require("../../graphics/images/dash_8.png")} style={{width: '100%'}}/>
 
         </div>
     )

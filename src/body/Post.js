@@ -18,9 +18,14 @@ export const Post = (props) => {
     const fileStyle = useSpring({
         marginLeft: expanded ? '-150vw' : '0px',
         opacity: expanded ? 0 : 1,
+        position: 'absolute',
+        width: '100%',
+        height: '45vh',
+        marginTop: '5vh',
+        filter: 'drop-shadow(0px 0px 10px rgba(0,0,0,0.25))',
         config: {
-            tension: 100,
-            friction: 15
+            tension: 50,
+            friction: 10
         }
     })
 
@@ -28,24 +33,24 @@ export const Post = (props) => {
         marginLeft: expanded ? '100%' : '7%',
         opacity: expanded ? 0 : 1,
         config: {
-            tension: 100,
-            friction: 15
+            tension: 50,
+            friction: 10
         }
     })
 
     const postDateStyle = useSpring({
         marginTop: expanded ? '2.5vh' : '7vh',
         config: {
-            tension: 100,
-            friction: 15
+            tension: 50,
+            friction: 10
         }
     })
 
     const postTitleWrapperStyle = useSpring({
         marginTop: expanded ? '10vh' : '12vh',
         config: {
-            tension: 100,
-            friction: 15
+            tension: 50,
+            friction: 10
         }
     })
 
@@ -53,18 +58,18 @@ export const Post = (props) => {
         marginTop: expanded ? '23vh' : '100vh',
         opacity: expanded ? 1 : 0,
         config: {
-            tension: 100, 
-            friction: 15
+            tension: 50, 
+            friction: 10
         }
     })
 
     const postStyle = useSpring({
         height: expanded ? '90vh' : '50vh', 
-        width: expanded ? '61vw' : '38vw',
-        marginLeft: expanded ? '7vw' : '18.5vw',
+        width: expanded ? '70vw' : '38vw',
+        marginLeft: expanded ? '2.5vw' : '18.5vw',
         config: {
-            tension: 100,
-            friction: 15
+            tension: 50,
+            friction: 10
         }
     })
 
@@ -100,7 +105,7 @@ export const Post = (props) => {
                 <div className="post-date-text">Created in <date style={{color: expanded ? 'white' : 'rgba(145,189,199,1'}}>{date}</date></div>
             </animated.div>
             <animated.div className="post-image-wrapper" style={imgStyle}>
-                <img src={require('../graphics/images/' + imgPath + '.png')} alt="" style={{width: '70%', height: '45%'}} />
+                <img src={require('../graphics/images/' + imgPath + '.png')} alt="" style={{position: 'absolute', width: '70%', height: '45%', marginTop: '5vh', filter: 'drop-shadow(0px 0px 10px rgba(0,0,0,0.25))'}} />
                 <div class="post-image-tape" />
             </animated.div>
             <div onMouseDown={() => setExpanded(expanded ? false : true)}>

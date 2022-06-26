@@ -40,7 +40,7 @@ export const SWEUXPosts = () => {
     return (
         <>
         <Post 
-            tags={["React", "TypeScript", "SCSS", "Frontend"]}
+            tags={["React", "TypeScript", "SCSS", "Frontend", "UI/UX"]}
             title="DASH: Web app redesign"
             date="May 2021"
             imgPath="dash cover"
