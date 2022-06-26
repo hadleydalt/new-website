@@ -106,7 +106,6 @@ export const Post = (props) => {
             </animated.div>
             <animated.div className="post-image-wrapper" style={imgStyle}>
                 <img src={require('../graphics/images/' + imgPath + '.png')} alt="" style={{position: 'absolute', width: '70%', height: '45%', marginTop: '5vh', filter: 'drop-shadow(0px 0px 10px rgba(0,0,0,0.25))'}} />
-                <div class="post-image-tape" />
             </animated.div>
             <div onMouseDown={() => setExpanded(expanded ? false : true)}>
                 <PostLearnMore pressed={expanded}/>

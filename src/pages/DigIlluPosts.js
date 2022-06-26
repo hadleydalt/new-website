@@ -30,7 +30,7 @@ content
 ------ 
 Type: .js file
 Example: <SampleContent />
-Notes: Create a .js file under /body/posts and export the post as a const. Contain it with the div tag "post-style". Refer to /pages/SampleContent for an example
+Notes: Create a .js file under /pages/<appropriate content file> and export the post as a const. Contain it with the div tag "post-style". Refer to /pages/SampleContent for an example
 
 */
 
