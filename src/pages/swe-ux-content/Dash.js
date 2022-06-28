@@ -25,7 +25,7 @@ I was challenged to code my own version of DASH using <b>TypeScript</b>, <b>Reac
 
 <p>To tackle Goal 1, I began by breaking up DASH's functionality into four components:</p>
 
-<p><img src={require("../../graphics/images/dash_2.png")} style={{width: '50%', marginLeft: '25%'}} /></p>
+<img src={require("../../graphics/images/dash_2.png")} style={{width: '50%'}} />
 
 <p>To address Goal 2, I first created an <b>affinity diagram</b> to map each pain point with its potential solutions.</p>
 

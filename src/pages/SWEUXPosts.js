@@ -1,6 +1,9 @@
 import '../App.css';
 import { Post } from '../body/Post'
 import { Dash } from './swe-ux-content/Dash';
+import { BostonAI } from './swe-ux-content/BostonAI';
+import { Soma } from './swe-ux-content/Soma';
+
 
 /* Insert new posts and edit existing posts here! 
 
@@ -45,6 +48,20 @@ export const SWEUXPosts = () => {
             date="May 2021"
             imgPath="dash cover"
             content={<Dash />}
+        />
+        <Post 
+            tags={["UI/UX", "Prototyping", "Figma", "User research"]}
+            title="Web Design for Boston AI Labs"
+            date="July 2021"
+            imgPath="bostai cover"
+            content={<BostonAI />}
+        />
+        <Post 
+            tags={["React Native", "JavaScript", "Frontend", "Full stack"]}
+            title="Soma (the App)"
+            date="present"
+            imgPath="soma"
+            content={<Soma />}
         />
         </>
     )
