@@ -12,6 +12,11 @@ export const Sidebar = (props) => {
 
     const inPosition = props.inPosition
 
+    const linkOne = props.linkOne
+    const linkTwo = props.linkTwo
+    const linkThree = props.linkThree
+    const linkFour = props.linkFour
+
     const whiteStyle = useSpring({
         marginTop: inPosition ? '2vh' : '-20vh',
         opacity: inPosition ? 1 : 0,
@@ -72,10 +77,18 @@ export const Sidebar = (props) => {
                 <div className="sidebar-content-wrapper">
                     <div className="sidebar-title">Navigation</div>
                     <div className="sidebar-links-wrapper">
-                        <SidebarLink text="SWE/UX Projects" icon={<Smartphone />}/>
-                        <SidebarLink text="Typography and Logos" icon={<Layout />}/>
-                        <SidebarLink text="Digital Illustrations" icon={<Folder />}/>
-                        <SidebarLink text="Painting and Fine Art" icon={<Feather />}/>
+                        <button style={{background: "transparent", border: 0}} onClick={props.linkOne}>
+                            <SidebarLink text="Personas + Storyboarding" icon={<Smartphone />}/>
+                        </button>
+                        <button style={{background: "transparent", border: 0}} onClick={props.linkTwo}>
+                            <SidebarLink text="Responsive Redesign" icon={<Layout />}/>
+                        </button>
+                        <button style={{background: "transparent", border: 0}} onClick={props.linkThree}>
+                            <SidebarLink text="Development" icon={<Folder />}/>
+                        </button>
+                        <button style={{background: "transparent", border: 0}} onClick={props.linkFour}>
+                            <SidebarLink text="Hypermedia Web App" icon={<Feather />}/>
+                        </button>
                     </div>
                     <ContactBox />
                 </div>

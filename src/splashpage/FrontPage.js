@@ -4,13 +4,14 @@ import { TopBar } from './TopBar';
 import React, { useState, createRef } from 'react';
 import { ArrowDown } from '../graphics/icons/ArrowDown';
 import { Sidebar } from '../body/Sidebar'
-import { ExperimentalObj } from '../body/ExperimentalObj';
+import { Post } from '../body/Post';
 
 
 export const FrontPage = () => {
     const myRef = createRef()
     const [scrollTop, setScrollTop] = useState(0)
     const [arrowTriggered, setArrowTriggered] = useState(false)
+    const [page, setPage] = useState(0)
 
     const onScroll = () => {
         const scrollTop = myRef.current.scrollTop
@@ -45,7 +46,7 @@ export const FrontPage = () => {
                 onMouseOver={() => {
                     setArrowTriggered(!arrowTriggered)}}
                 >
-                        <Constellations rotatePos={scrollTop/4} opacity={opacity} />
+                        <Constellations rotatePos={scrollTop/6} opacity={opacity} />
                         <div 
                             className="intro"
                         >
@@ -55,8 +56,24 @@ export const FrontPage = () => {
                 </div>
                 <TopBar opacity={opacity}/>
             </div>
-            <Sidebar inPosition={opacity < 0.5} />
-            <ExperimentalObj />
+            <Sidebar 
+                inPosition={opacity < 0.5}
+                linkOne={()=>{
+                    setPage(0)
+                }} 
+                linkTwo={()=>{
+                    setPage(1)
+                }}
+                linkThree={()=>{
+                    setPage(2)
+                }}
+                linkFour={()=>{
+                    setPage(3)
+                }}
+            />
+            <div style={{postion: 'absolute', marginTop: '-70vh', marginLeft: '22vw'}}>
+                <Post current={page} /> 
+            </div>
         </div>
     )
 }
