@@ -65,18 +65,10 @@ export const Sidebar = (props) => {
                 <div className="sidebar-content-wrapper">
                     <div className="sidebar-title">Navigation</div>
                     <div className="sidebar-links-wrapper">
-                        <Link to='/' style={{textDecoration: 'none'}}>
                             <SidebarLink text="SWE/UX Projects" icon={<Smartphone />}  />
-                        </Link>
-                        <Link to='/typography-logos' style={{textDecoration: 'none'}}>
                             <SidebarLink text="Typography and Logos" icon={<Layout />} />
-                        </Link>
-                        <Link to='/digital-illustration' style={{textDecoration: 'none'}}>
                             <SidebarLink text="Digital Illustrations" icon={<Folder />} />
-                        </Link>
-                        <Link to='painting-fine-art' style={{textDecoration: 'none'}}>
                             <SidebarLink text="Painting and Fine Art" icon={<Feather />} />
-                        </Link>
                     </div>
                     <ContactBox />
                 </div>
