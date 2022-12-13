@@ -9,11 +9,11 @@ export const TopBar = (props) => {
         <div className="topbar" style={{opacity: opacity, height: opacity < 0.1 ? 0 : 70}}>
             {opacity < 0.1 ? null : 
             <>
-            <TopBarLink text="link one" dec={false}/>
-            <TopBarLink text="link two" dec={false}/>
-            <TopBarLink text="link three" dec={false}/>
-            <TopBarLink text="link four" dec={false}/>
-            <TopBarLink text="link five" dec/>
+            <TopBarLink text="GitHub" dec={false}/>
+            <TopBarLink text="LinkedIn" dec={false}/>
+            <TopBarLink text="Email" dec={false}/>
+            <TopBarLink text="About Me" dec={false}/>
+            <TopBarLink text="Resume" dec/>
             </>
             }
         </div>

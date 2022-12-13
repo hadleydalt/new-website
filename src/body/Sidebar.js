@@ -12,11 +12,6 @@ export const Sidebar = (props) => {
 
     const inPosition = props.inPosition
 
-    const linkOne = props.linkOne
-    const linkTwo = props.linkTwo
-    const linkThree = props.linkThree
-    const linkFour = props.linkFour
-
     const whiteStyle = useSpring({
         marginTop: inPosition ? '2vh' : '-20vh',
         opacity: inPosition ? 1 : 0,
@@ -75,7 +70,7 @@ export const Sidebar = (props) => {
                 <animated.div className="dotted-circle" style={dottedStyle} />
                 <animated.div className="line-circle" style={lineStyle} />
                 <div className="sidebar-content-wrapper">
-                    <div className="sidebar-title">Navigation</div>
+                    <div className="sidebar-title">Projects</div>
                     <div className="sidebar-links-wrapper">
                         <button style={{background: "transparent", border: 0}} onClick={props.linkOne}>
                             <SidebarLink text="Personas + Storyboarding" icon={<Smartphone />}/>
