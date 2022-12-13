@@ -11,11 +11,11 @@ export const ContactBox = () => {
             <div className="contact-box-text">
                 This site was designed, illustrated and coded by me. If 
 you are interested in a creative commission please 
-contact me at hadley_dalton@brown.edu, preferably 
+contact me at [REDACTED], preferably 
 with “Commission” in the subject line. 
 
 For anything else, don’t hesitate to get in touch 
-by emailing me at hadley_dalton@brown.edu!  
+by emailing me at [REDACTED]!
             </div>
         </div>
 

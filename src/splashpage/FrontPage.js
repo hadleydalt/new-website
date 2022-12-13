@@ -50,7 +50,7 @@ export const FrontPage = () => {
                         <div 
                             className="intro"
                         >
-                            <img src={require('../graphics/images/TRANSPARENT SPLASH GRAPHIC.png')} alt=""/>
+                            <img src={require('../graphics/images/Redacted.png')} alt=""/>
                         </div>
                         <ArrowDown arrowTriggered={arrowTriggered}/>
                 </div>
